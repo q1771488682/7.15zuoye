@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/uek.css">
+
+
+</head>
+
+<body>
+    <div class="banner">
+
+        <div class="title">
+            <span class="swiper-pagination-bullet   abc"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+        </div>
+        <div class="img">
+            <img src="./img/uek1.jpg" alt="" class="img-1">
+            <img src="./img/uek2.jpg" alt="" class="img-1">
+            <img src="./img/uek3.jpg" alt="" class="img-1">
+            <img src="./img/uek4.jpg" alt="" class="img-1">
+            <img src="./img/uek5.jpg" alt="" class="img-1">
+            <img src="./img/uek6.jpg" alt="" class="img-1">
+
+
+        </div>
+    </div>
+    <script>
+        var sps = document.querySelectorAll(".swiper-pagination-bullet")
+        var imgs = document.querySelectorAll(".img-1")
+        console.log(imgs)
+        var num = 0;
+        setInterval(() => {
+            num++;
+            if (num > sps.length - 1) {
+                num = 0;
+            }
+
+            for (var j = 0; j < imgs.length; j++) {
+                sps[j].setAttribute("class", "swiper-pagination-bullet");
+                imgs[j].style.display = "none"
+
+
+            }
+            sps[num].setAttribute("class", "swiper-pagination-bullet  abc");
+            imgs[num].style.display = "block"
+
+
+        }, 3000);
+        for (let i = 0; i < sps.length; i++) {
+            sps[i].onclick = function() {
+                num = i;
+                for (var j = 0; j < imgs.length; j++) {
+                    sps[j].setAttribute("class", "swiper-pagination-bullet");
+                    imgs[j].style.display = "none"
+
+
+                }
+                sps[i].setAttribute("class", "swiper-pagination-bullet  abc");
+                imgs[i].style.display = "block"
+            }
+        }
+    </script>
+</body>
+
+</html>

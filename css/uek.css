@@ -1,0 +1,46 @@
+    .banner {
+        width: 100%;
+        height: 400px;
+        position: relative;
+    }
+    
+    .img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .img-1 {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .title {
+        width: 100%;
+        text-align: center;
+        height: 15px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 20px;
+    }
+    
+    span {
+        display: inline-block;
+        width: 60px;
+        height: 2px;
+        background: rgba(255, 255, 255, 1);
+        cursor: pointer;
+        margin-right: 8px;
+        border-radius: 0;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background: #2691FD;
+        /* display: block; */
+    }
+    
+    .abc {
+        background: #2691FD;
+    }
